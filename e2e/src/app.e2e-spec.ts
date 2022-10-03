@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-describe('Dynamic Component Loader', () => {
+describe('Word Pair Associate', () => {
 
   // The tests trigger periodic asynchronous operations (via `setInterval()`), which will prevent
   // the app from stabilizing. See https://angular.io/api/core/ApplicationRef#is-stable-examples
