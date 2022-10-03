@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { WordAssociateComponent } from './word-associate.component'; 
 import { WordsDisplayComponent } from './words-display/words-display.component'; 
 import { MessagePageComponent } from './message-page/message-page.component';
-import { TaskMessageComponent } from './task-message/task-message.component';
+import { InputWordComponent } from './input-word/input-word.component'; 
 import { TotalPercentageComponent } from './total-percentage/total-percentage.component';
 
 import { WordDirective } from './word.directive';
@@ -26,7 +26,7 @@ import { WordService } from './word.service';
     WordAssociateComponent,
     WordsDisplayComponent,
     MessagePageComponent,
-    TaskMessageComponent,
+    InputWordComponent ,
     TotalPercentageComponent,
     WordDirective
   ],
