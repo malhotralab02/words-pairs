@@ -13,6 +13,10 @@ import { TotalPercentageComponent } from './total-percentage/total-percentage.co
 
 import { WordDirective } from './word.directive';
 import { WordService } from './word.service';
+import { Lits1Component } from './lits1/lits1.component';
+import { Lits3Component } from './lits3/lits3.component';
+import { Lits5Component } from './lits5/lits5.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 //import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -28,7 +32,11 @@ import { WordService } from './word.service';
     MessagePageComponent,
     InputWordComponent ,
     TotalPercentageComponent,
-    WordDirective
+    WordDirective,
+    Lits1Component,
+    Lits3Component,
+    Lits5Component,
+    MainPageComponent
   ],
   bootstrap: [ AppComponent ]
 })
