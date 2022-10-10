@@ -30,47 +30,37 @@ body, input[text] {
 a {
   cursor: pointer;
 }
-button {
-  background-color: #eee;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  color: black;
-  font-size: 1.2rem;
-  padding: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-button:hover {
-  background-color: black;
-  color: white;
-}
-button:disabled {
-  background-color: #eee;
-  color: #aaa;
-  cursor: auto;
-}
+
 
 /* Navigation link styles */
 nav a {
-  padding: 5px 10px;
+  /* padding: 5px 10px;*/
   text-decoration: none;
   margin-right: 10px;
   margin-top: 10px;
   display: inline-block;
-  background-color: #e8e8e8;
+  padding: 1em;
+  margin-bottom: 1em;
+  color: #016690;
+  /* background-color: #e8e8e8;
   color: #3d3d3d;
-  border-radius: 4px;
+  border-radius: 4px; */
 }
 
 nav a:hover {
   color: white;
   background-color:  #42545C;
+  text-decoration: none;
 }
 nav a.active {
-  background-color: black;
-  color: white;
+  /*background-color: black;
+  color: white;*/
+  color: #00629b;
+  padding-left: 0!important;
+}
+a{
+  font-size: 85%;
+  color: #337ab7;
 }
 hr {
   margin: 1.5rem 0;
@@ -80,5 +70,57 @@ input[type="text"] {
   width: 100%;
   padding: .5rem;
 }
+.message-format{
+  text-align: center;
+  margin-top: 180px;
+}
 
+.btn-first-message{
+  font-weight: 700;
+  font-size: 0.875rem;
+  font-family: Open Sans,Tahoma,Geneva,sans-serif;
+  box-sizing: border-box;
+    min-height: 2.1875rem;
+    *height: 1.5rem;
+    border: 0.0625rem;
+    color: #fff;
+    *min-height: 0px;
+    background-color: #227ab9;
+    border-color: transparent;
+    display: inline-block;
+    padding: 6px 12px;
+    *padding: 0px 12px;
+    font-weight: 700;
+    line-height: 16px;
+    white-space: nowrap;
+    background-image: none;
+    border: 1px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Open Sans, Tahoma, Geneva, sans-serif;
+    text-align: center;
+    min-height: 35px;
+    *min-height: 0px;
+    *height: 24px;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background-color: #227AB9;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-color: transparent;
+}
+p{
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 130%;
+  margin-bottom: 25px;
+}
 

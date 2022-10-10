@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationStart} from '@angular/router';
 
-import { WordService } from './word.service';
+import { WordService } from './word.service'; 
 import { AddWord } from './add-word';
 import { Subscription } from 'rxjs';
 

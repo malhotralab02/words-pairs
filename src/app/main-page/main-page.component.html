@@ -1,28 +1,18 @@
 <div>
+    <router-outlet></router-outlet>
     <nav>
-        <ul>
+        <ul class="main-content-nav">
           <li>
-            <a
-              routerLink="/app-lits1"
-              ariaCurrentWhenActive="page"
-              >List One</a
-            >
+            <h2>
+              <a routerLink="app-lits-one" routerLinkActive="active">List One</a>
+            </h2>
           </li>
           <li>
-            <a  
-              routerLink="/app-lits3"
-              ariaCurrentWhenActive="page"
-              >List Three</a
-            >
+            <h2><a routerLink="app-lits-three" routerLinkActive="active">List Three</a></h2>
           </li>
           <li>
-            <a
-              routerLink="/app-lits5x"
-              ariaCurrentWhenActive="page"
-              >List Five</a
-            >
+            <h2><a routerLink="app-list-five" routerLinkActive="active">List Five</a></h2>
           </li>
         </ul>
       </nav>
-      
 </div>

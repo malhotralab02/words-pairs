@@ -1,11 +1,10 @@
 import { Component, Input } from '@angular/core';
-
 import { WordComponent } from './word.component';
 
 @Component({
   template: `
     <div class="list-display">
-      <p>{{data.name}} - {{data.bio}}</p> 
+      <p>{{data.listone}} - {{data.listonesec}}</p> 
     </div>
   `
 })
