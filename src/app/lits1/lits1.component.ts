@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class Lits1Component implements OnInit {
   data: any;
   constructor() { }
-
+  
   ngOnInit(): void {
   }
 

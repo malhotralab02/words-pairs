@@ -6,10 +6,10 @@ import { WordComponent } from '../word.component';
 @Component({
   selector: 'app-word-associate',
   template: `
-  <div class="word-class">
+  <div>
   <ng-template wordHost></ng-template>
-  <div class="a-bunch-of-styles-for-my-button">
-    <button class="more-styles" 
+  <div class="next_btn_wrap">
+    <button class="next_btn" 
     [disabled]="nextClick" 
     [routerLink]="['/task-message']" href="">Next</button>
 </div>
@@ -46,6 +46,8 @@ export class WordAssociateComponent implements OnInit, OnDestroy {
 
     this.currentAdIndex = (this.currentAdIndex + 1) % this.words.length;
     const addWord = this.words[this.currentAdIndex];
+    
+    console.log("My test", this.words[this.currentAdIndex].data.listonesec);
 
     const viewContainerRef = this.wordHost.viewContainerRef;
     viewContainerRef.clear();
@@ -67,6 +69,6 @@ export class WordAssociateComponent implements OnInit, OnDestroy {
   getWordsOne() {
     this.interval = window.setInterval(() => {
       this.loadComponent();
-    }, 3000);
+    }, 1000);
   }
 }

@@ -14,6 +14,7 @@ words: AddWord[] = [];
 
   ngOnInit() {
     this.words = this.wordService.getWordsOne();
+    //console.log("Testing", this.words);
   }
 
 }

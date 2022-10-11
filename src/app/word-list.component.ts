@@ -10,6 +10,9 @@ import { WordComponent } from './word.component';
 })
 export class WordListComponent implements WordComponent {
   @Input() data: any;
+
+
+  //console.log("My test", this.data.listonesec);
 }
 
 

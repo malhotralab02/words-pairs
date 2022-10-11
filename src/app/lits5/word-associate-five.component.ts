@@ -6,10 +6,10 @@ import { WordComponent } from '../word.component';
 @Component({
   selector: 'app-word-associate-five',
   template: `
-    <div class="word-class">
+    <div>
       <ng-template wordHost></ng-template>
-      <div class="a-bunch-of-styles-for-my-button">
-        <button class="more-styles" 
+      <div class="next_btn_wrap">
+        <button class="next_btn" 
         [disabled]="nextClick" 
         [routerLink]="['/task-message']" href="">Next</button>
     </div>
@@ -71,6 +71,6 @@ export class WordAssociateFiveComponent implements OnInit, OnDestroy {
   getWordsFive() {
     this.interval = window.setInterval(() => {
       this.loadComponent();
-    }, 3000);
+    }, 1000);
   }
 }
