@@ -11,7 +11,11 @@ import { MessageFiveComponent } from './message-five/message-five.component';
 import { WordThreeDisplayComponent } from './lits3/word-three-display.component';
 import { WordFiveDisplayComponent } from './lits5/word-five-display.component';
 import { TaskMessageComponent } from './task-message/task-message.component';
-import { InputTaskComponent } from './input-task/input-task.component';
+import { TaskMessageThreeComponent } from './task-message-three/task-message-three.component';
+import { TaskMessageFiveComponent } from './task-message-five/task-message-five.component';
+import { WordInputDisplayComponent } from './word-input-display/word-input-display.component';
+import { WordInputDisplayThreeComponent } from './word-input-display-three/word-input-display-three.component';
+import { WordInputDisplayFiveComponent } from './word-input-display-five/word-input-display-five.component';
 
 const routes: Routes = [
 
@@ -27,8 +31,12 @@ const routes: Routes = [
   { path: 'word-display-three', component: WordThreeDisplayComponent },
   { path: 'word-display-five', component: WordFiveDisplayComponent },
   { path: 'task-message', component: TaskMessageComponent},
-  { path: 'app-input-task', component: InputTaskComponent},
-  
+  { path: 'task-message-three', component: TaskMessageThreeComponent},
+  { path: 'task-message-five', component: TaskMessageFiveComponent},
+  { path: 'word-display-input', component: WordInputDisplayComponent},
+  { path: 'word-display-input-three', component: WordInputDisplayThreeComponent},
+  { path: 'word-display-input-five', component: WordInputDisplayFiveComponent}
+
    // otherwise redirect to home
     //{ path: '**', redirectTo: '' }
 ];

@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import { WordListComponent } from './word-list.component'; 
+import { WordListComponent } from './lits1/word-list.component'; 
 import { WordListThreeComponent } from './lits3/word-list-three.component'; 
 import { AddWord } from './add-word'; 
 import { WordListFiveComponent } from './lits5/word-list-five.component';
+import { WordListInputOneComponent } from './word-input-display/word-list-input-one.component';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class WordService {
   getWordsOne() {
     return [
@@ -20,6 +21,7 @@ export class WordService {
         WordListComponent,
         { listone: 'family', listonesec: 'marriage' }
       ),
+      
 
 
 
@@ -71,6 +73,23 @@ garden	flowerbed
 	*/
     ];
   }
+
+  getWordsInputOne() {
+    return [
+      new AddWord(
+        WordListInputOneComponent,
+        { listone: 'tower', listonesec: 'bell' }
+      ),
+      new AddWord(
+        WordListInputOneComponent,
+        { listone: 'sea', listonesec: 'tideome' }
+      ),
+      new AddWord(
+        WordListInputOneComponent,
+        { listone: 'family', listonesec: 'marriage' }
+      ),
+    ]
+      } 
 
 
   getWordsThree(){

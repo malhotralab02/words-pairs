@@ -11,7 +11,7 @@ import { WordComponent } from '../word.component';
       <div class="next_btn_wrap">
         <button class="next_btn" 
         [disabled]="nextClick" 
-        [routerLink]="['/task-message']" href="">Next</button>
+        [routerLink]="['/task-message-five']" href="">Next</button>
     </div>
     </div>
   `

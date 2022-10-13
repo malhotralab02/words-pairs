@@ -25,7 +25,15 @@ import { MessageThreeComponent } from './message-three/message-three.component';
 import { MessageFiveComponent } from './message-five/message-five.component';
 import { WordListThreeComponent } from './lits3/word-list-three.component';
 import { WordListFiveComponent } from './lits5/word-list-five.component';
-import { InputTaskComponent } from './input-task/input-task.component';
+import { TaskMessageThreeComponent } from './task-message-three/task-message-three.component';
+import { TaskMessageFiveComponent } from './task-message-five/task-message-five.component';
+import { WordInputDisplayComponent } from './word-input-display/word-input-display.component';
+import { WordAssociateInputComponent } from './word-input-display/word-associate-input.component';
+import { WordInputDisplayThreeComponent } from './word-input-display-three/word-input-display-three.component';
+import { WordAssociateInputThreeComponent } from './word-input-display-three/word-associate-input-three.component';
+import { WordInputDisplayFiveComponent } from './word-input-display-five/word-input-display-five.component';
+import { WordAssociateInputFiveComponent } from './word-input-display-five/word-associate-input-five.component';
+import { WordListInputOneComponent } from './word-input-display/word-list-input-one.component';
 
 @NgModule({
   imports: [ BrowserModule, AppRoutingModule
@@ -51,7 +59,16 @@ import { InputTaskComponent } from './input-task/input-task.component';
     WordListThreeComponent,
     WordListFiveComponent,
     TaskMessageComponent,
-    InputTaskComponent,
+    TaskMessageThreeComponent,
+    TaskMessageFiveComponent,
+    WordInputDisplayComponent,
+    WordAssociateInputComponent,
+    WordInputDisplayThreeComponent,
+    WordAssociateInputThreeComponent,
+    WordInputDisplayFiveComponent,
+    WordAssociateInputFiveComponent,
+    WordListInputOneComponent,
+  
   ],
   bootstrap: [ AppComponent ]
 })
