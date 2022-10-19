@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -34,9 +35,15 @@ import { WordAssociateInputThreeComponent } from './word-input-display-three/wor
 import { WordInputDisplayFiveComponent } from './word-input-display-five/word-input-display-five.component';
 import { WordAssociateInputFiveComponent } from './word-input-display-five/word-associate-input-five.component';
 import { WordListInputOneComponent } from './word-input-display/word-list-input-one.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  imports: [ BrowserModule, AppRoutingModule
+  imports: [ 
+    BrowserModule, 
+    AppRoutingModule,
+    FormsModule, 
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [ WordService],
   declarations: [

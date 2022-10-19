@@ -1,5 +1,12 @@
 <p>word-list-input-one works!</p>
-<div class="list-display">
-    <p>{{data.listone}}</p> 
-  </div>
-  //<input id="message" type="text" name="message" value="Initial Value" />
+
+<form [formGroup]="form" class="form-match">
+  <label class="message">{{data.listone}} - </label>
+  <input id="userInputs" type="text"
+    name="userInputs" 
+  (keyup.enter)="onEnter(data.listonesec,userInputs.value)" (click)="$event.stopPropagation()"
+   #userInput #userInputs>
+   <span id="messages"></span>
+   <h1>{{correct}}{{data.listonesec}}</h1>
+  <label class="message">{{data.listonesec}} - </label>
+</form>

@@ -5,6 +5,8 @@ import { WordService } from './word.service';
 import { AddWord } from './add-word';
 import { Subscription } from 'rxjs';
 
+import Swal from 'sweetalert2';
+
 export let browserRefresh = false;
 
 @Component({

@@ -13,8 +13,9 @@ import { WordDirective } from '../word.directive';
   </div>
 `
 })
-export class WordAssociateInputComponent implements OnInit, OnDestroy {
+export class WordAssociateInputComponent implements OnInit, OnDestroy, WordComponent {
   @Input() wordsInput: AddWord[] = [];
+  @Input() data: any;
 
   constructor() { }
 
@@ -37,33 +38,38 @@ export class WordAssociateInputComponent implements OnInit, OnDestroy {
 
 
   loadComponent() {
-
-    /*function shuffle(list) {
-      return list.reduce((p, n) => {
-        const size = p.length;
-        const index = Math.trunc(Math.random() * (size - 1));
-        p.splice(index, 0, n);
-        return p;
-      }, []);
-    };*/
-
-    
-
     if (this.counter < this.wordsInput.length) {
+     
+      if (this.wordsInput.length === 0){
+        alert("The right Word is ");
+        
+      }
+      
       //this.currentAdIndex = (this.currentAdIndex + 1) % this.wordsInput.length;
+
+      //Show random words
       this.wordsInput.sort(() => Math.random() - Math.random()).slice(0,1);
       //const intersection = array1.filter(element => array2.includes(element));
       this.currentAdIndex = Math.floor((this.currentAdIndex + 1) % this.wordsInput.length);
       const addWordInput = this.wordsInput[this.currentAdIndex];
 
-      //console.log("My test", this.wordsInput[this.currentAdIndex]);
+      console.log("My test", this.wordsInput[this.currentAdIndex]);
 
       //console.log ("Find the word", this.wordsInput);
 
-      //alert(this.wordsInput[this.currentAdIndex].data.listone);
-      console.log("random", this.wordsInput.sort(() => Math.random() - Math.random()).slice(0,1));
+      console.log("My second word",this.wordsInput[this.currentAdIndex].data.listonesec);
+      //console.log("random", this.wordsInput.sort(() => Math.random() - Math.random()).slice(0,1));
+      
+      const input = document.getElementById('message') as HTMLInputElement | null;
 
 
+      //const value = input?.value;
+      //console.log("my value", value) // "Initial value"
+
+      if (input != null) {
+        console.log("mamam", input.value); // "Initial value"
+      };
+      
       const viewContainerRef = this.wordHost.viewContainerRef;
       viewContainerRef.clear();
 
@@ -75,11 +81,12 @@ export class WordAssociateInputComponent implements OnInit, OnDestroy {
       
     }
   }
-
+  //set the interval to minutes 
   getWordsInputOne() {
     this.interval = window.setInterval(() => {
       this.loadComponent();
-    }, 5000);
+    }, 50 * 1000);
   }
+  
 }
 
