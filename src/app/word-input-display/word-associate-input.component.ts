@@ -36,7 +36,6 @@ export class WordAssociateInputComponent implements OnInit, OnDestroy, WordCompo
     }
   }
 
-
   loadComponent() {
     if (this.counter < this.wordsInput.length) {
      
@@ -53,22 +52,19 @@ export class WordAssociateInputComponent implements OnInit, OnDestroy, WordCompo
       this.currentAdIndex = Math.floor((this.currentAdIndex + 1) % this.wordsInput.length);
       const addWordInput = this.wordsInput[this.currentAdIndex];
 
-      console.log("My test", this.wordsInput[this.currentAdIndex]);
+      console.log("We are at the end of the list", this.wordsInput.length);
 
       //console.log ("Find the word", this.wordsInput);
 
       console.log("My second word",this.wordsInput[this.currentAdIndex].data.listonesec);
       //console.log("random", this.wordsInput.sort(() => Math.random() - Math.random()).slice(0,1));
       
-      const input = document.getElementById('message') as HTMLInputElement | null;
+      //const input = document.getElementById('message') as HTMLInputElement | null;
 
 
       //const value = input?.value;
       //console.log("my value", value) // "Initial value"
 
-      if (input != null) {
-        console.log("mamam", input.value); // "Initial value"
-      };
       
       const viewContainerRef = this.wordHost.viewContainerRef;
       viewContainerRef.clear();
@@ -85,7 +81,7 @@ export class WordAssociateInputComponent implements OnInit, OnDestroy, WordCompo
   getWordsInputOne() {
     this.interval = window.setInterval(() => {
       this.loadComponent();
-    }, 50 * 1000);
+    }, 8000);
   }
   
 }

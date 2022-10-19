@@ -36,6 +36,7 @@ import { WordInputDisplayFiveComponent } from './word-input-display-five/word-in
 import { WordAssociateInputFiveComponent } from './word-input-display-five/word-associate-input-five.component';
 import { WordListInputOneComponent } from './word-input-display/word-list-input-one.component';
 import { CommonModule } from '@angular/common';
+import { DisableOnEnterDirective } from './disable-on-enter.directive';
 
 @NgModule({
   imports: [ 
@@ -75,6 +76,7 @@ import { CommonModule } from '@angular/common';
     WordInputDisplayFiveComponent,
     WordAssociateInputFiveComponent,
     WordListInputOneComponent,
+    DisableOnEnterDirective,
   
   ],
   bootstrap: [ AppComponent ]

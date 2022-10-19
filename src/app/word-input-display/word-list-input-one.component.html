@@ -1,12 +1,16 @@
 <p>word-list-input-one works!</p>
 
-<form [formGroup]="form" class="form-match">
+<form [formGroup]="inputForm " class="form-match">
   <label class="message">{{data.listone}} - </label>
-  <input id="userInputs" type="text"
+  <input disable-on-enter id="userInputs" type="text"
     name="userInputs" 
   (keyup.enter)="onEnter(data.listonesec,userInputs.value)" (click)="$event.stopPropagation()"
-   #userInput #userInputs>
-   <span id="messages"></span>
-   <h1>{{correct}}{{data.listonesec}}</h1>
+    #userInputs>
+   <span class="outputMessage" style="color: red; text-align: center;">
+    <div>{{errorMessage}}</div>
+   </span> 
+   <span class="correctMessage" style="color: blue; text-align: center;">
+    <div>{{correctWord}}</div>
+   </span>
   <label class="message">{{data.listonesec}} - </label>
 </form>

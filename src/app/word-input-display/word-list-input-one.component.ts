@@ -4,20 +4,30 @@ import { WordComponent } from '../word.component';
 
 import Swal from 'sweetalert2';
 import { BehaviorSubject, Subject, switchMap, pipe } from 'rxjs';
+import { AddWord } from '../add-word';
 
 @Component({
   selector: 'app-word-list-input-one',
   templateUrl: './word-list-input-one.component.html',
+
 })
 export class WordListInputOneComponent implements WordComponent {
-  interval: number | undefined;
-   correct = "The correct word is ";
+  @Input() wordsInput: AddWord[] = [];
+  listOfInputs = [];
 
-  form!: FormGroup;
+  currentAdIndex = -1;
+  interval: number | undefined;
+   //correct = "The correct word is ";
+
+  inputForm!: FormGroup;
   event!:any;
-  myWord: any;
+  myWord: string = '';
+  myuserInput: string = '';
+  correctWord: string = '';
+  errorMessage: string = '';
+  multiSelect: boolean = true;
   
-  constructor(private fb: FormBuilder){ }
+  constructor(private myForm: FormBuilder){ }
 
   
   @Input() data: any;
@@ -30,7 +40,7 @@ export class WordListInputOneComponent implements WordComponent {
   
 
   ngOnInit() {
-    this.form = this.fb.group({
+    this.inputForm = this.myForm.group({
       userInputs: ''
     })
     
@@ -63,7 +73,11 @@ export class WordListInputOneComponent implements WordComponent {
       console.log("right answer is ", myWord);
       // Test wheter myuserInput is empty, but not None 
       if (myuserInput === ''){
-        confirm("The correct word is !"+myWord);
+        this.errorMessage = "The correct word is " + myWord;
+        console.log(this.multiSelect = false);
+        //return this.multiSelect = false;
+        
+        //confirm("The correct word is !"+myWord);
         //this.message.style.color = "red"
         //alert("The correct word is " + myWord);
         // Information
@@ -80,13 +94,23 @@ export class WordListInputOneComponent implements WordComponent {
       //do something*/
     }
      else if( myuserInput != myWord){
-      alert("Not " + myuserInput + ", the correct word is " + myWord);
+      this.errorMessage = "INCORRECT!, not " + "'"+myuserInput+"'" + ", the correct word is " + myWord;
+      console.log(this.multiSelect = false);
+      //return this.multiSelect = false;
+      //alert("Not " + myuserInput + ", the correct word is " + myWord);
       //this.getWordsInputOne();
       }
     else if (myWord === myuserInput){  
-      alert("Correct answer"); 
+      this.correctWord = "Correct answer";
+      console.log(this.multiSelect);
+      //return this.multiSelect = true;
+      //alert("Correct answer"); 
       //this.getWordsInputOne();
+    
     }
+
+    //console.log(this.multiSelect);
+    console.log("We are at the end of the list", this.wordsInput.length);
     /**else if(userInput === this.empty || myWord != userInput){
 
       alert("Wrong word, the correct word is " + myWord);
@@ -97,11 +121,25 @@ export class WordListInputOneComponent implements WordComponent {
     //return setInterval(onEnter(), 1000);
     //this.getWordsInput();
     console.log("The intervale is ", this.interval);
+
+    console.log("Finding the lenght ", this.myWord.length)
+    
+
+    //this.getWordsInputOne();
+    console.log("Here is my boolena answer ", this.multiSelect);
+    return this.multiSelect;
+    
     
   };
-  
- 
 
+
+  //Populate array with input values
+  //Find the lenght of myWord
+  getWordsInputOne() {
+    this.interval = window.setInterval(() => {
+      this.onEnter(this.myWord, this.myuserInput);
+    }, 1000);
+  }
 }
 
 
