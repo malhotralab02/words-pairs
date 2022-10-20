@@ -39,11 +39,6 @@ export class WordAssociateInputComponent implements OnInit, OnDestroy, WordCompo
   loadComponent() {
     if (this.counter < this.wordsInput.length) {
      
-      if (this.wordsInput.length === 0){
-        alert("The right Word is ");
-        
-      }
-      
       //this.currentAdIndex = (this.currentAdIndex + 1) % this.wordsInput.length;
 
       //Show random words
@@ -52,11 +47,11 @@ export class WordAssociateInputComponent implements OnInit, OnDestroy, WordCompo
       this.currentAdIndex = Math.floor((this.currentAdIndex + 1) % this.wordsInput.length);
       const addWordInput = this.wordsInput[this.currentAdIndex];
 
-      console.log("We are at the end of the list", this.wordsInput.length);
+      //console.log("We are at the end of the list", this.wordsInput.length);
 
       //console.log ("Find the word", this.wordsInput);
 
-      console.log("My second word",this.wordsInput[this.currentAdIndex].data.listonesec);
+     // console.log("My second word",this.wordsInput[this.currentAdIndex].data.listonesec);
       //console.log("random", this.wordsInput.sort(() => Math.random() - Math.random()).slice(0,1));
       
       //const input = document.getElementById('message') as HTMLInputElement | null;

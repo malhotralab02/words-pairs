@@ -2,10 +2,10 @@
 
 <form [formGroup]="inputForm " class="form-match">
   <label class="message">{{data.listone}} - </label>
-  <input disable-on-enter id="userInputs" type="text"
-    name="userInputs" 
-  (keyup.enter)="onEnter(data.listonesec,userInputs.value)" (click)="$event.stopPropagation()"
-    #userInputs>
+  <input disable-on-enter id="userInputs" type="text" spellcheck=true
+    name="userInputs"
+  (keyup.enter)="onEnter(data.listonesec,userInputs.value); store(userInputs.value)" (click)="$event.stopPropagation()"
+   #userInputs>
    <span class="outputMessage" style="color: red; text-align: center;">
     <div>{{errorMessage}}</div>
    </span> 
