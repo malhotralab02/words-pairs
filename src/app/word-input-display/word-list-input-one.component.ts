@@ -82,6 +82,9 @@ export class WordListInputOneComponent implements WordComponent {
     return false;
 }*/
  //Funtion with condition for different scenarios
+
+
+
   onEnter(myWord: string , myuserInput:string) {
       // Test wheter myuserInput is empty, but not None 
       if (myuserInput === ''){
@@ -131,7 +134,6 @@ export class WordListInputOneComponent implements WordComponent {
     //console.log(this.multiSelect);
     //console.log("We are at the end of the list", this.wordsInput.length);
     /**else if(userInput === this.empty || myWord != userInput){
-
       alert("Wrong word, the correct word is " + myWord);
       //return myWord;
       //console.log("the right wordis ", myWord);
@@ -145,7 +147,7 @@ export class WordListInputOneComponent implements WordComponent {
     
 
     //this.getWordsInputOne();
-    //this.store();
+    this.store;
   
     return this.multiSelect;
     
@@ -186,6 +188,3 @@ export class WordListInputOneComponent implements WordComponent {
     }, 1000);
   }
 }
-
-
-
