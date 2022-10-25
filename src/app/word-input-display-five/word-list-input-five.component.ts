@@ -11,16 +11,12 @@ const win: Window = window;
 var counter = 0;
 var countEntrance = 0;
 
-
-
 @Component({
-  selector: 'app-word-list-input-one',
-  templateUrl: './word-list-input-one.component.html',
-
+  selector: 'app-word-list-input-five',
+  templateUrl: './word-list-input-five.component.html'
 })
-export class WordListInputOneComponent implements OnInit {
-
-  @Input() wordsInput: AddWord[] = [];
+export class WordListInputFiveComponent implements OnInit {
+  @Input() wordsInputFive: AddWord[] = [];
   @Input() data: any;
   @Input() newData: string[] = [];
   global_correctas: number = 0;

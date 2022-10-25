@@ -12,7 +12,7 @@ export class WordInputDisplayFiveComponent implements OnInit {
   constructor(private wordService: WordService) { }
 
   ngOnInit(): void {
-    this.wordsInputFive = this.wordService.getWordsFive();
+    this.wordsInputFive = this.wordService.getWordsInputFive();
   }
 
 }

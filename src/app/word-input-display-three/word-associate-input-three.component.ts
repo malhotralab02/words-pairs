@@ -13,7 +13,8 @@ import { WordDirective } from '../word.directive';
 })
 export class WordAssociateInputThreeComponent implements OnInit, OnDestroy {
   @Input() wordsInputThree: AddWord[] = [];
-  
+  @Input() data: any;
+
   constructor() { }
 
   currentAdIndex = -1;
@@ -35,9 +36,12 @@ export class WordAssociateInputThreeComponent implements OnInit, OnDestroy {
   }
   loadComponent() {
     if (this.counter < this.wordsInputThree.length) {
-      this.currentAdIndex = (this.currentAdIndex + 1) % this.wordsInputThree.length;
-      const addWordInput = this.wordsInputThree[this.currentAdIndex];
 
+      this.wordsInputThree.sort(() => Math.random() - Math.random()).slice(0,1);
+      
+      this.currentAdIndex = Math.floor((this.currentAdIndex + 1) % this.wordsInputThree.length);
+      const addWordInput = this.wordsInputThree[this.currentAdIndex];
+      
       const viewContainerRef = this.wordHost.viewContainerRef;
       viewContainerRef.clear();
 
@@ -51,7 +55,7 @@ export class WordAssociateInputThreeComponent implements OnInit, OnDestroy {
   getWordsThree() {
     this.interval = window.setInterval(() => {
       this.loadComponent();
-    }, 1000);
+    }, 6000);
   }
 
 }

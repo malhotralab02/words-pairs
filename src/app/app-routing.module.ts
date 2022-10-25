@@ -16,6 +16,8 @@ import { TaskMessageFiveComponent } from './task-message-five/task-message-five.
 import { WordInputDisplayComponent } from './word-input-display/word-input-display.component';
 import { WordInputDisplayThreeComponent } from './word-input-display-three/word-input-display-three.component';
 import { WordInputDisplayFiveComponent } from './word-input-display-five/word-input-display-five.component';
+import { FailTestComponent } from './fail-test.component';
+import { PassTestComponent } from './pass-test.component';
 
 const routes: Routes = [
 
@@ -33,9 +35,11 @@ const routes: Routes = [
   { path: 'task-message', component: TaskMessageComponent},
   { path: 'task-message-three', component: TaskMessageThreeComponent},
   { path: 'task-message-five', component: TaskMessageFiveComponent},
-  { path: 'word-display-input', component: WordInputDisplayComponent},
+  { path: 'word-display-input', component: WordInputDisplayComponent,},
   { path: 'word-display-input-three', component: WordInputDisplayThreeComponent},
-  { path: 'word-display-input-five', component: WordInputDisplayFiveComponent}
+  { path: 'word-display-input-five', component: WordInputDisplayFiveComponent},
+  { path: 'fail-test', component: FailTestComponent},
+  { path: 'pass-test', component: PassTestComponent}
 
    // otherwise redirect to home
     //{ path: '**', redirectTo: '' }

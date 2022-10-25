@@ -44,6 +44,7 @@ export class WordAssociateThreeComponent implements OnInit, OnDestroy {
 
   loadComponent() {
     if (this.counter < this.wordsThree.length) {
+      
       this.currentAdIndex = (this.currentAdIndex + 1) % this.wordsThree.length;
       const addWordThree = this.wordsThree[this.currentAdIndex];
 

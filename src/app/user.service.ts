@@ -6,7 +6,4 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
   constructor() { }
-  useData(formData: any) :void{
-    // do what you need with formData
-   }
 }

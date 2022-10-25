@@ -7,12 +7,14 @@ import { WordDirective } from '../word.directive';
   selector: 'app-word-associate-input-five',
   template: `
   <div>
-    <ng-template wordHost></ng-template>
+    <ng-template wordHost>
+    </ng-template>
   </div>
 `
 })
 export class WordAssociateInputFiveComponent implements OnInit, OnDestroy {
   @Input() wordsInputFive: AddWord[] = [];
+  @Input() data: any;
 
   constructor() { }
 
@@ -25,7 +27,7 @@ export class WordAssociateInputFiveComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.loadComponent();
-    this.getWordsFive();
+    this.getWordsInputFive();
   }
 
   ngOnDestroy() {
@@ -35,9 +37,12 @@ export class WordAssociateInputFiveComponent implements OnInit, OnDestroy {
   }
   loadComponent() {
     if (this.counter < this.wordsInputFive.length) {
-      this.currentAdIndex = (this.currentAdIndex + 1) % this.wordsInputFive.length;
+      //Show random words
+      this.wordsInputFive.sort(() => Math.random() - Math.random()).slice(0,1);
+      
+      this.currentAdIndex = Math.floor((this.currentAdIndex + 1) % this.wordsInputFive.length);
       const addWordInput = this.wordsInputFive[this.currentAdIndex];
-
+      
       const viewContainerRef = this.wordHost.viewContainerRef;
       viewContainerRef.clear();
 
@@ -45,12 +50,13 @@ export class WordAssociateInputFiveComponent implements OnInit, OnDestroy {
       componentRef.instance.data = addWordInput.data;
       this.counter++;
       
+      
     }
   }
 
-  getWordsFive() {
+  getWordsInputFive() {
     this.interval = window.setInterval(() => {
       this.loadComponent();
-    }, 1000);
+    }, 6000);
   }
 }

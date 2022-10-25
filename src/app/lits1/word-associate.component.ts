@@ -48,7 +48,6 @@ export class WordAssociateComponent implements OnInit, OnDestroy {
     this.currentAdIndex = (this.currentAdIndex + 1) % this.words.length;
     const addWord = this.words[this.currentAdIndex];
     
-    console.log("My test", this.words[this.currentAdIndex].data.listonesec);
 
     const viewContainerRef = this.wordHost.viewContainerRef;
     viewContainerRef.clear();

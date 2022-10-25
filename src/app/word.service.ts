@@ -4,6 +4,8 @@ import { WordListThreeComponent } from './lits3/word-list-three.component';
 import { AddWord } from './add-word'; 
 import { WordListFiveComponent } from './lits5/word-list-five.component';
 import { WordListInputOneComponent } from './word-input-display/word-list-input-one.component';
+import { WordListInputThreeComponent } from './word-input-display-three/word-list-input-three.component';
+import { WordListInputFiveComponent } from './word-input-display-five/word-list-input-five.component';
 
 @Injectable({providedIn: 'root'})
 export class WordService {
@@ -108,6 +110,7 @@ garden	flowerbed
       ),
 
 
+     
 
       /*
       rider	switch	
@@ -158,6 +161,74 @@ circus	clown
       */
     ];
   }
+  getWordsInputThree(){
+    return [
+      new AddWord(
+        WordListInputThreeComponent,
+        { listhree: 'frog', listhreesec: 'green' }
+      ),
+      new AddWord(
+        WordListInputThreeComponent,
+        { listhree: 'red', listhreesec: 'rose' }
+      ),
+      new AddWord(
+        WordListInputThreeComponent,
+        { listhree: 'phone', listhreesec: 'call' }
+      ),
+
+
+     
+
+      /*
+      rider	switch	
+fire	smoke	
+animal	fox	
+road	car	
+weaver	troubles	
+flakes	rescue	
+rein	turn	
+mission	messenger	
+furniture	chair	
+body	blood	
+army	admiral	
+friend	loyalty	
+bird	lark	
+celebration	alcohol	
+reptile	frog	
+grain	oats	
+joint	knuckle	
+artist	painting	
+statement	doubt	
+revolt	policeman	
+alliance	betrayal	
+event	incident	
+factory	foreman	
+plant	leaf	
+tenant	rent	
+commercial	candy	
+giant	club	
+trip	map	
+mountain	boulder	
+ruler	palace	
+play	drama	
+illness	doctor	
+church	heaven	
+infection	bacteria	
+university	semester	
+underworld	crime	
+instrument	bagpipes	
+glacier	avalanche	
+idea	proverb	
+faith	renouncement	
+theory	concept	
+authority	state	
+fir	needle	
+circus	clown	
+
+      */
+    ];
+        
+  }
 
   getWordsFive(){
     return [
@@ -171,6 +242,23 @@ circus	clown
       ),
       new AddWord(
         WordListFiveComponent,
+        { listfive: 'cake', listfivesec: 'cherry' }
+      ),
+    ];
+  }
+
+  getWordsInputFive(){
+    return [
+      new AddWord(
+        WordListInputFiveComponent,
+        { listfive: 'pencil', listfivesec: 'paper' }
+      ),
+      new AddWord(
+        WordListInputFiveComponent,
+        { listfive: 'fan', listfivesec: 'air' }
+      ),
+      new AddWord(
+        WordListInputFiveComponent,
         { listfive: 'cake', listfivesec: 'cherry' }
       ),
     ];

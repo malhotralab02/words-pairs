@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { WordAssociateComponent } from './lits1/word-associate.component'; 
 import { WordsDisplayComponent } from './lits1/words-display.component'; 
 import { MessagePageComponent } from './message-page/message-page.component';
-import { TotalPercentageComponent } from './total-percentage/total-percentage.component';
 import { TaskMessageComponent } from './task-message/task-message.component';
 
 import { WordDirective } from './word.directive';
@@ -37,6 +36,10 @@ import { WordAssociateInputFiveComponent } from './word-input-display-five/word-
 import { WordListInputOneComponent } from './word-input-display/word-list-input-one.component';
 import { CommonModule } from '@angular/common';
 import { DisableOnEnterDirective } from './disable-on-enter.directive';
+import { FailTestComponent } from './fail-test.component'; 
+import { PassTestComponent } from './pass-test.component';
+import { WordListInputThreeComponent } from './word-input-display-three/word-list-input-three.component'; 
+import { WordListInputFiveComponent } from './word-input-display-five/word-list-input-five.component'; 
 
 @NgModule({
   imports: [ 
@@ -52,7 +55,6 @@ import { DisableOnEnterDirective } from './disable-on-enter.directive';
     WordAssociateComponent,
     WordsDisplayComponent,
     MessagePageComponent,
-    TotalPercentageComponent,
     WordDirective,
     Lits1Component,
     Lits3Component,
@@ -77,6 +79,11 @@ import { DisableOnEnterDirective } from './disable-on-enter.directive';
     WordAssociateInputFiveComponent,
     WordListInputOneComponent,
     DisableOnEnterDirective,
+    FailTestComponent,
+    PassTestComponent,
+    WordListInputThreeComponent,
+    WordListInputFiveComponent,
+
   
   ],
   bootstrap: [ AppComponent ]
