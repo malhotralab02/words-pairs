@@ -35,7 +35,7 @@ const routes: Routes = [
   { path: 'task-message', component: TaskMessageComponent},
   { path: 'task-message-three', component: TaskMessageThreeComponent},
   { path: 'task-message-five', component: TaskMessageFiveComponent},
-  { path: 'word-display-input', component: WordInputDisplayComponent,},
+  { path: 'word-display-input', component: WordInputDisplayComponent},
   { path: 'word-display-input-three', component: WordInputDisplayThreeComponent},
   { path: 'word-display-input-five', component: WordInputDisplayFiveComponent},
   { path: 'fail-test', component: FailTestComponent},
