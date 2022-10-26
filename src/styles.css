@@ -4,8 +4,9 @@
   
 }
 h1 {
-  color: #264D73;
-  font-size: 2.5rem;
+    color: #00629b;
+    letter-spacing: .5px;
+    font-size: 39px;
 }
 h2, h3 {
   color: #444;
@@ -50,7 +51,6 @@ nav a {
 
 nav a:hover {
   color:  #00629b;
-  text-decoration: underline;
 }
 nav a.active {
   /*background-color: black;
@@ -163,13 +163,22 @@ p{
     text-transform: uppercase;
     border-color: transparent;
 }
-.next_btn :hover {
+/*.next_btn :hover {
   text-decoration: underline;
-}
+}*/
 
 .next_btn_wrap{
   text-align: center;
 }
+button:hover {
+  color: #00629b;
+}
+.next_btn:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
 
 input[type="text"]{
   margin-bottom: 25px;
@@ -190,5 +199,17 @@ input[type="text"]{
   text-align: right;
   font-size: xxx-large;
   margin-left: 100px;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: #227ab9 !important;
+  border-radius: 4px !important;
+  border-color: transparent !important;
+  font-weight: 700 !important;
+  font-size: 0.875rem !important;
+  font-family: Open Sans,Tahoma,Geneva,sans-serif !important;
+}
+.swal2-styled.swal2-confirm :hover {
+  color:  #00629b !important;
 }
 
